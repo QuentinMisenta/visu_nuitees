@@ -173,7 +173,7 @@ model nuitees_cantons {
 
 model nuitees_communes {
   Ann_e                                       Int            @map("Ann�e")
-  Mois                                        String
+  Mois                                        Int
   Commune                                     String
   Pays_de_provenance___total_Arriv_es         Int?           @map("Pays de provenance - total Arriv�es")
   Pays_de_provenance___total_Nuit_es          Int?           @map("Pays de provenance - total Nuit�es")
