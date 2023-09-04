@@ -3,7 +3,7 @@
 ## Description
 This web Visualization is based on Hotel accommodation databases provided by the [Swiss Federal Statistical Office](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.html).
 
-![Dashboard view](/prisma/Swiss1.png)
+![Dashboard view](/Swiss1.png)
 
 
 This Visualization is used to show all the overnight stays and their distribution across Switzerland and it's cantons since 2005  until February 2023. A variety of parameters can be displayed using the following Database : 
