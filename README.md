@@ -17,7 +17,9 @@ This project is hosted on a server, reachable by using the following link on any
 
 **List of cantons** : The map features a scrollable list of cantons, which is used to visually display the chosen canton and the number of overnight stays by hovering over the map with the mouse. 
 
-**Sliders** : It also features two sliders, which serve to determine the wanted time frame in years and months. Afterwards, the total number of stays for said period will be displayed on the side and the color of the map will change accordingly (the color will darken as the numbers increase). This allows us to see in a blink of an eye the evolution of overnight stays in Swizerland, the different trends, as well as establishing a comparison both geographically and temporally.
+**Temporal sliders** : It also features two sliders, which serve to determine the wanted time frame in years and months. Afterwards, the total number of stays for said period will be displayed on the side and the color of the map will change accordingly (the color will darken as the numbers increase). This allows us to see in a blink of an eye the evolution of overnight stays in Swizerland, the different trends, as well as establishing a comparison both geographically and temporally.
+
+**Zoom sliders** : This allows the user to zoom in/out of a specific part of the map. 
 
 ## Datasets used
 This project uses data from the following datasets: [Overnight stays by 100 communes](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.27065618.html) and [Overnight stays by canton](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.24805214.html) 
