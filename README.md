@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Overnight stays visualized across Switzerland 
 
-## Getting Started
+## Description
+This web visualisation is based on Hotel accommodation databases provided by [Hotel accomodation](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.html).
 
-First, run the development server:
+![Dashboard view] 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The Database is used to show all the overnight stays and their distribution across Switzerland and it's cantons for the periode of 2005 and February 2023. A variety of parameters can be displayed using the following Database : 
+- The total number of overnight stays across Switzerland from 2005 to February 2023
+- The evolution of overnight stays aross Switzerland and per canton from 2005 to February 2023
+- The number of overnight stays in a canton for a given timeframe between 2005 and February 2023
+- The number of overnight stays for the 100 communes that had the most stays for the chosen timeframe.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Use 
+This project is hosted on a server, reachable by using the following link and any web browser : [Project](https://misenta.ovh/dashboard).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**List of cantons**: The map features a scrollable list of cantons, which is used to show display the chosen canton and the number of overnight stays by hovering over the map with the mouse. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Sliders**: It also features two sliders, which serve to determine the wanted time frame in years or months. Afterwards, the total number of stays for said period will be displayed on the side and the color of the map will change accordingly (the color will darken as the numbers increase). This allows us to see in a blink of an eye the evolution of overnight stays in Swizerland, the different trends, as well as establishing a comparison both geographically and temporally.
 
-## Learn More
+## Datasets used
+This project uses data from the following datasets: [Dataset1](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.27065618.html) and [Dataset2](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.24805214.html) 
 
-To learn more about Next.js, take a look at the following resources:
+Every few month, the data regarding the number of people staying overnight in a Hotel in Switzerland are reported and published. The first dataset concerns the stays spent in 100 communes that have the most overnight stays. Meanwhile, the second dataset is much broader and presents the monthly data of  stays in the hotel sector by canton since 2005.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For the different coat of arms used in the scrollable list of cantons, these are under public domain.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tools used
+This work uses the following tools: 
+- D3.js : D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. D3.js allows to breath life in data by making use of HTML and CVG and CSS. The version used is ver.7.8.5. 
+- ???
 
-## Deploy on Vercel
+## Hosting 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Autors
+All work presented here was made by Pierre Bühler & Quentin Misenta regading the evaluation for "Visualisation de données", a course taught by the Professor Isaac Pante at the University of Lausanne. This project allowed us to give life to the different datas used, as well as better grasp to the different visualisation possible. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Acknowledgements
+Mike Bostock for D3 and all the given examples.
+Isaac Pante for the classes, ressources and advice.
+The JS community for helping eachother.
