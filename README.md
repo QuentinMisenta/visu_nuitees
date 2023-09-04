@@ -3,7 +3,8 @@
 ## Description
 This web Visualization is based on Hotel accommodation databases provided by the [Swiss Federal Statistical Office](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.html).
 
-![Dashboard view] 
+![Dashboard view](/prisma/Swiss1.png)
+
 
 This Visualization is used to show all the overnight stays and their distribution across Switzerland and it's cantons since 2005  until February 2023. A variety of parameters can be displayed using the following Database : 
 - The total number of overnight stays across Switzerland from 2005 to February 2023
@@ -14,9 +15,9 @@ This Visualization is used to show all the overnight stays and their distributio
 ## Use 
 This project is hosted on a server, reachable by using the following link on any web browser : [Project](https://misenta.ovh/dashboard).
 
-**List of cantons**: The map features a scrollable list of cantons, which is used to visually display the chosen canton and the number of overnight stays by hovering over the map with the mouse. 
+**List of cantons** : The map features a scrollable list of cantons, which is used to visually display the chosen canton and the number of overnight stays by hovering over the map with the mouse. 
 
-**Sliders**: It also features two sliders, which serve to determine the wanted time frame in years and months. Afterwards, the total number of stays for said period will be displayed on the side and the color of the map will change accordingly (the color will darken as the numbers increase). This allows us to see in a blink of an eye the evolution of overnight stays in Swizerland, the different trends, as well as establishing a comparison both geographically and temporally.
+**Sliders** : It also features two sliders, which serve to determine the wanted time frame in years and months. Afterwards, the total number of stays for said period will be displayed on the side and the color of the map will change accordingly (the color will darken as the numbers increase). This allows us to see in a blink of an eye the evolution of overnight stays in Swizerland, the different trends, as well as establishing a comparison both geographically and temporally.
 
 ## Datasets used
 This project uses data from the following datasets: [Overnight stays by 100 communes](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.27065618.html) and [Overnight stays by canton](https://www.bfs.admin.ch/bfs/en/home/statistics/tourism/tourist-accommodation/hotel-accommodation.assetdetail.24805214.html) 
