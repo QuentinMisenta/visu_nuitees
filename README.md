@@ -41,7 +41,7 @@ The project also needed the [list of communes](https://www.agvchapp.bfs.admin.ch
 
 This work uses the following Libraries: 
 - [next.js](https://nextjs.org/) a server side rendering framework based on react.
-- D3.js : D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. D3.js allows to breath life in data by making use of HTML and CVG and CSS. The version used is ver.7.8.5. 
+- [D3.js](https://d3js.org/) : D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. D3.js allows to breath life in data by making use of HTML and CVG and CSS. The version used is ver.7.8.5. 
 - [Prisma](https://nextjs.org/) a node.js ORM
 - [MUI](https://mui.com/) a react UI tools library
 - turf: Turf is a modular geospatial analysis engine written in JavaScript. It performs geospatial processing tasks with GeoJSON data and can be run on a server or in a browser.
