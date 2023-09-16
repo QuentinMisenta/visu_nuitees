@@ -49,7 +49,7 @@ This work uses the following Libraries:
   
 
 ## Authors
-All work presented here was made by Pierre Bühler & Quentin Misenta regading the evaluation for "Visualisation de données", a course taught by the Professor Isaac Pante at the University of Lausanne. This project allowed us to give life to the different datas used, as well as better grasp to the different visualisation possible. 
+All work presented here was made by Pierre Bühler & Quentin Misenta regading the evaluation for "Visualisation de données", a course taught by the Professor Isaac Pante at the University of Lausanne. This project allowed us to give life to the different datas used, as well as better grasp the different visualisations possible. 
 
 ## Acknowledgements
 Mike Bostock for D3 and all the given examples.
