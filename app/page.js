@@ -1,5 +1,16 @@
+import README from "./README.mdx";
+import "./markdown.css";
+
+/**
+ * The home page of the application.
+ * @returns {JSX.Element} - the home page
+ *
+ */
+
 export default function Home() {
-    return(
-        <h1>Home</h1>
-    )
+  return (
+    <div className="markdown">
+      <README />
+    </div>
+  );
 }

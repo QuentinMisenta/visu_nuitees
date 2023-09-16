@@ -37,10 +37,12 @@ yarn-error.log*
 next-env.d.ts
 
 #files too large
-json/HOHEITSGEBIET.json
-json/KANTONSGEBIET.json
-json/swissBOUNDARIES3D_1_3_TLM_BEZIRKSGEBIET.geojson
-json/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET.geojson
-json/swissBOUNDARIES3D_1_3_TLM_HOHEITSGRENZE.geojson
-json/swissBOUNDARIES3D_1_3_TLM_KANTONSGEBIET.geojson
-json/swissBOUNDARIES3D_1_3_TLM_LANDESGEBIET.geojson
+app/json/HOHEITSGEBIET.json
+app/json/KANTONSGEBIET.json
+app/json/swissBOUNDARIES3D_1_3_TLM_BEZIRKSGEBIET.geojson
+app/json/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET.geojson
+app/json/swissBOUNDARIES3D_1_3_TLM_HOHEITSGRENZE.geojson
+app/json/swissBOUNDARIES3D_1_3_TLM_KANTONSGEBIET.geojson
+app/json/swissBOUNDARIES3D_1_3_TLM_LANDESGEBIET.geojson
+/swissBOUNDARIES3D_1_3_TLM_HOHEITSGEBIET.geojson
+/swissBOUNDARIES3D_1_3_TLM_KANTONSGEBIET.geojson

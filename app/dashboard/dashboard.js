@@ -1,16 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import SwissMap from "./SwissMap";
 import YearSelector from "./YearSelector";
 import MonthSelector from "./MonthSelector";
 import CantonMap from "./CantonMap";
+import SwissMap from "./SwissMap";
+import Select from "@mui/joy/Select";
+import Option from "@mui/joy/Option";
 
 /**
  * The Dashboard component renders the SwissMap, YearSelector, and MonthSelector components.
  * It uses the useState and useEffect hooks from React for managing component state and side effects.
  * Additionally, it imports the SwissMap, YearSelector, and MonthSelector components for rendering.
- * The handleSelectChange, handleYearChange, and handleMonthChange functions are used to update the component state when the user selects a new canton, year, or month.
+ * The handleSelectChange, handleYearChange, and handleMonthChange functions are used to update the
+ * component state when the user selects a new canton, year, or month.
  * The data prop is passed to the component to provide the data on overnight stays by country of origin.
  */
 
@@ -28,8 +31,8 @@ function Dashboard({ listCantons, selectedCanton, setSelectedCanton }) {
   const [dataNuitees, setDataNuitees] = useState([]);
 
   // Use the handleSelectChange function to update the selectedCanton state variable when the user selects a new canton.
-  const handleSelectCantonChange = (e) => {
-    setSelectedCanton(e.target.value);
+  const handleSelectCantonChange = (e, newCanton) => {
+    setSelectedCanton(newCanton);
   };
   // Use the handleYearChange function to update the selectedYear state variable when the user selects a new year.
   const handleYearChange = (startYear, endYear) => {
@@ -43,9 +46,10 @@ function Dashboard({ listCantons, selectedCanton, setSelectedCanton }) {
   useEffect(() => {
     const fetchData = async () => {
       if (selectedCanton === "Suisse") {
+        // If the selected canton is "Suisse", fetch the aggregated data for the whole of Switzerland.
         try {
           const res = await fetch(
-            `http://localhost:3000/api/data/${selectedCanton}/${selectedYear.startYear}/${selectedYear.endYear}/${selectedMonth.startMonth}/${selectedMonth.endMonth}/aggregate`
+            `api/data/${selectedCanton}/${selectedYear.startYear}/${selectedYear.endYear}/${selectedMonth.startMonth}/${selectedMonth.endMonth}/aggregate`
           );
           const dataNuiteesAgg = await res.json();
           setDataNuiteesAgg(dataNuiteesAgg);
@@ -53,9 +57,10 @@ function Dashboard({ listCantons, selectedCanton, setSelectedCanton }) {
           console.error(error);
         }
       } else {
+        // If the selected canton is not "Suisse", fetch the data for the selected canton.
         try {
           const res = await fetch(
-            `http://localhost:3000/api/${selectedCanton}/${selectedYear.startYear}/${selectedYear.endYear}/${selectedMonth.startMonth}/${selectedMonth.endMonth}`
+            `api/${selectedCanton}/${selectedYear.startYear}/${selectedYear.endYear}/${selectedMonth.startMonth}/${selectedMonth.endMonth}`
           );
           const dataNuitees = await res.json();
           setDataNuitees(dataNuitees);
@@ -73,35 +78,52 @@ function Dashboard({ listCantons, selectedCanton, setSelectedCanton }) {
     selectedMonth.endMonth,
   ]);
   return (
-    <div>
+    <div className="z-0 w-full">
       <div>
         {/* Use the handleSelectChange function to update the selectedCanton state variable when the user selects a new canton. */}
-        <select
+        <Select
+          defaultValue="Suisse"
+          variant="outlined"
           name="Canton"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          startDecorator={
+            <img
+              src={`../armoiries/Wappen_${selectedCanton}_matt.svg`}
+              alt={`${selectedCanton} coat of arms`}
+              className="mr-2 inline-block h-6 w-6 align-middle"
+            />
+          }
+          className=" mx-auto mt-8 w-3/4 px-8"
           onChange={handleSelectCantonChange}
         >
-          <option>Choisissez un canton ou la suisse</option>
           {listCantons.map((canton) => (
-            <option key={canton} value={canton}>
+            <Option key={canton} value={canton}>
+              <img
+                src={`../armoiries/Wappen_${canton}_matt.svg`}
+                alt={`${canton} coat of arms`}
+                className="mr-2 inline-block h-6 w-6 align-middle"
+              />
               {canton}
-            </option>
+            </Option>
           ))}
-        </select>
+        </Select>
+      </div>
+      <div>
         {selectedCanton === "Suisse" ? (
-          <SwissMap dataNuiteeAgg={dataNuiteesAgg} />
+          <SwissMap dataNuiteesAgg={dataNuiteesAgg} />
         ) : (
           <CantonMap canton={selectedCanton} dataNuitees={dataNuitees} />
         )}
       </div>
-      <YearSelector
-        selectedPeriod={selectedYear}
-        onYearChange={handleYearChange}
-      />
-      <MonthSelector
-        selectedPeriod={selectedMonth}
-        onMonthChange={handleMonthChange}
-      />
+      <div>
+        <YearSelector
+          selectedPeriod={selectedYear}
+          onYearChange={handleYearChange}
+        />
+        <MonthSelector
+          selectedPeriod={selectedMonth}
+          onMonthChange={handleMonthChange}
+        />
+      </div>
     </div>
   );
 }
