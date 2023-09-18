@@ -7,7 +7,7 @@ This web Visualization is based on Hotel accommodation databases provided by the
 ![Dashboard view](/Swiss1.png)
 
 
-This Visualization is used to show all the overnight stays and their distribution across Switzerland and it's cantons since 2005  until February 2023. A variety of parameters can be displayed using the following Database : 
+This Visualization is used to show all the overnight stays and their distribution across Switzerland and it's cantons from 2005  until February 2023. A variety of parameters can be displayed using the following Database : 
 - The total number of overnight stays across Switzerland from 2005 to February 2023
 - The evolution of overnight stays aross Switzerland and per canton from 2005 to February 2023
 - The number of overnight stays in a canton for a given timeframe between 2005 and February 2023
